@@ -5,8 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
+    <!-- external links -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Major+Mono+Display&family=Montserrat:ital,wght@0,100;0,200;0,400;0,600;1,100;1,200&family=Playfair+Display+SC&family=Rubik+Bubbles&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200;1,300;1,400;1,600;1,700&family=Major+Mono+Display&family=Montserrat:ital,wght@0,100;0,200;0,400;0,600;1,100;1,200&family=Playfair+Display+SC&family=Rubik+Bubbles&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/514377067a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- styles -->
     <script src="./scripts/script.js" async defer></script>
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
-  <body></body>
+
+  <body>
+    <!-- nav bar -->
+    <div class="navbar">
+      <input type="checkbox" class="checkbox" id="click" hidden />
+
+      <!-- sidebar -->
+      <div class="sidebar">
+        <label for="click">
+          <div class="menu-icon">
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+          </div>
+        </label>
+
+        <!-- social media links, must load fontawesome-->
+
+        <ul class="social-icons-list">
+          <li>
+            <a href="#" class="social-link"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" class="social-link"
+              ><i class="fa-brands fa-google-plus-g"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" class="social-link"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </li>
+        </ul>
+        <!-- end of social media links -->
+
+        <div class="year">
+          <p>2023</p>
+        </div>
+      </div>
+      <!-- end of sidebar -->
+
+      <!-- navigation -->
+      <nav class="navigation">
+        <div class="navigation-header">
+          <h1 class="navigation-heading">Ski Resort App</h1>
+
+          <form class="navigation-search">
+            <input
+              type="text"
+              class="navigation-search-input"
+              placeholder="Type anything here...."
+            />
+            <button class="navigation-search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a href="#" class="navigation-link">home</a>
+          </li>
+          <li class="navigation-item">
+            <a href="#" class="navigation-link">locations</a>
+            <ul class="navigation-sub-list">
+              <li class="navigation-sub-item">
+                <a href="#" class="navigation-link">states</a>
+              </li>
+              <ul>
+                <li class="navigation-sub-sub-item">
+                  <a href="#" class="navigation-link">resorts</a>
+                </li>
+              </ul>
+            </ul>
+          </li>
+          <li class="navigation-item">
+            <a href="#" class="navigation-link">about us</a>
+          </li>
+          <li class="navigation-item">
+            <a href="#" class="navigation-link">contact us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- end of navigation -->
+    <!-- end of nav bar -->
+  </body>
 </html>
