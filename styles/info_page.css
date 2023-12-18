@@ -1,0 +1,8 @@
+body{
+    scroll-behavior: smooth;
+}
+
+.carousel_container {
+    width: 500px;
+    height: 250px;
+}
