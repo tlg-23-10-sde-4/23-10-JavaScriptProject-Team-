@@ -22,7 +22,7 @@ function createWeatherCard(weather) {
   let link = weather.notice.href;
   let card = document.createElement("div");
   card.classList.add("card");
-  card.setAttribute("style", "width: 40%");
+  card.setAttribute("style", "width: 100");
   card.innerHTML = `
     <div class="card-body">
       <h5 class="card-title">Weather for ${date}</h5>
