@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 5%;    
+    margin: 5%;    
     height: 25rem;
     width: 50rem;
 }
@@ -21,18 +21,26 @@
 }
 
 .ad{
-    align-items: center;
+    position: relative;
     justify-content: center;
-    width: 100%;
-    margin-top: 10%;    
-
+    align-items: center;
+    margin-top: 5%;    
+    height: 25rem;
+    width: 50rem;   
         & img {
         padding: 1.5%;
     }
 }
 
-#weather_card_container {
+#weather_card_container,
+#webcams_card_container,
+#lifts_card_container {
     height: 100%;
     width: 80%;
     padding-top: 5rem;
+}
+
+#two {
+    position: absolute;
+    margin: 400px 5% 5%;
 }
