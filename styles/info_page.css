@@ -1,48 +1,38 @@
-.carousel_container {
-    width: 500px;
-    height: 250px;
-}
-
 .stream {
     background-color: greenyellow;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5%;
-    
+    margin-top: 5%;    
+    height: 25rem;
+    width: 50rem;
 }
 
-.stream_left {
+.left {
     position: absolute;
-    margin-left: 20%;
-    margin-bottom: 5%;
-    margin-top: 5%;
-    height: 250px;
-    width: 400px;
+    align-items: left;
+    justify-content: center;
 }
 
-.stream_right {
+.right {
     position: relative;
     margin-left: 55%;
-    margin-bottom: 5%;
-    height: 500px;
-    width: 40%;
-}
-
-#left2 {
-    background-color: teal;
-    position: absolute;
-    margin-top: 36.5%;
 }
 
 .ad{
     align-items: center;
     justify-content: center;
-    width: 90%;
-    margin-left: 5%;
+    width: 100%;
+    margin-top: 10%;    
+
+        & img {
+        padding: 1.5%;
+    }
 }
 
-img {
-    padding: 1.5%;
+#weather_card_container {
+    height: 100%;
+    width: 80%;
+    padding-top: 5rem;
 }
