@@ -6,3 +6,34 @@ body{
     width: 500px;
     height: 250px;
 }
+
+.stream {
+    background-color: greenyellow;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5%;
+}
+
+.stream_left {
+    position: absolute;
+    margin-left: 20%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    height: 250px;
+    width: 400px;
+}
+
+.stream_right {
+    position: relative;
+    margin-left: 55%;
+    margin-bottom: 5%;
+    height: 500px;
+    width: 40%;
+}
+
+#left2 {
+    background-color: teal;
+    position: absolute;
+    margin-top: 36.5%;
+}
+
