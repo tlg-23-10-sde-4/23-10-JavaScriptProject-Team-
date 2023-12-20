@@ -1,5 +1,5 @@
 .stream {
-    background-color: greenyellow;
+    background-color: hwb(250 10% 10% / .4);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -30,6 +30,12 @@
         & img {
         padding: 1.5%;
     }
+}
+
+.navbar {
+    width: 100%;
+    font-size: large;
+    background-color: hwb(150 10% 10% / .6);
 }
 
 #weather_card_container,

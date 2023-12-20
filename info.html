@@ -27,9 +27,31 @@
     ></script>
   </head>
   <body>
-    <header class="container">
+    <header class="container-lg">
       <!-- nav bar -->
-      <nav class="nav_bar"></nav>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><strong>SKIDAR</strong></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+            <a class="nav-item nav-link" href="#">Features</a>
+            <a class="nav-item nav-link" href="#">Pricing</a>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <!-- api stream frames -->
@@ -70,11 +92,11 @@
       </div>
     </aside>
 
-    <article class="container-lg right">
+    <article class="container-lg stream right">
       <div id="webcams_card_container"></div>
     </article>
 
-    <article class="container-lg right">
+    <article class="container-lg stream right">
       <div id="lifts_card_container"></div>
     </article>
   </body>
