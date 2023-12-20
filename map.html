@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Map</title>
+    <!-- The callback parameter is required, so we use console.debug as a noop -->
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIgceN68_b0buLW92IYC-KjRnJZZy-Lyc&callback=console.debug&libraries=maps,marker&v=beta"
+    ></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="./scripts/indexScript.js" async defer></script>
+    <link rel="stylesheet" href="./styles/map.css" />
+    <link rel="stylesheet" href="styles/info_page.css" />
+  </head>
+  <body>
+    <gmp-map
+      center="50.11508560180664,-122.94860076904297"
+      zoom="14"
+      map-id="DEMO_MAP_ID"
+      class="stream"
+    >
+      <gmp-advanced-marker
+        position="50.11508560180664,-122.94860076904297"
+        title="My location"
+      >
+      </gmp-advanced-marker>
+
+      <gmp-advanced-marker
+        position="0, 0"
+        title="resortLocation"
+        id="resortPointer"
+      >
+      </gmp-advanced-marker>
+    </gmp-map>
+  </body>
+</html>
