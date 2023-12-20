@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home page</title>
 
-    <!-- external links -->
+    <!-- External links -->
     <link
       href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Major+Mono+Display&family=Montserrat:ital,wght@0,100;0,200;0,400;0,600;1,100;1,200&family=Playfair+Display+SC&family=Rubik+Bubbles&display=swap"
       rel="stylesheet"
@@ -14,80 +14,106 @@
       href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200;1,300;1,400;1,600;1,700&family=Major+Mono+Display&family=Montserrat:ital,wght@0,100;0,200;0,400;0,600;1,100;1,200&family=Playfair+Display+SC&family=Rubik+Bubbles&display=swap"
       rel="stylesheet"
     />
-
     <script
       src="https://kit.fontawesome.com/514377067a.js"
       crossorigin="anonymous"
     ></script>
 
-    <!-- styles and JS -->
+    <!-- Styles and JS -->
+    <link rel="stylesheet" href="styles/styles.css" />
     <script src="./scripts/indexScript.js" async defer></script>
-    <link rel="stylesheet" href="./styles/styles.css" />
-
-    <!-- bootstrap css link -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <!-- bootstrap js link -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-      async
-      defer
-    ></script>
+    <style>
+      /* apply css grid to entire page */
+      body {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns:
+          minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem))
+          minmax(6rem, 1fr);
+        gap: 1.6rem;
+      }
+    </style>
   </head>
-
   <body>
-    <!-- nav bar -->
-    <div>
-      <input type="checkbox" class="checkbox" id="click" hidden />
-
-      <!-- sidebar -->
-      <div class="sidebar">
-        <label for="click">
-          <div class="menu-icon">
-            <div class="line line-1"></div>
-            <div class="line line-2"></div>
-            <div class="line line-3"></div>
-          </div>
-        </label>
-
-        <!-- social media links, must load fontawesome-->
-
-        <ul class="social-icons-list">
-          <li>
-            <a href="#" class="social-link"
-              ><i class="fa-brands fa-facebook"></i
-            ></a>
+    <div id="resort_cards_container"></div>
+    <div class="top-nav-container">
+      <nav class="top-nav">
+        <ul class="top-nav-list">
+          <li class="top-nav-item">
+            <a href="" class="top-nav-link"
+              ><i class="fas fa-sign-in-alt"></i>Sign Up / Log In</a
+            >
           </li>
-          <li>
-            <a href="#" class="social-link"
-              ><i class="fa-brands fa-google-plus-g"></i
-            ></a>
+          <li class="top-nav-item">
+            <a href="#" class="top-nav-link"
+              ><i class="fa-solid fa-video"></i>Cams</a
+            >
           </li>
-          <li>
-            <a href="#" class="social-link"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
+          <li class="top-nav-item">
+            <a href="#" class="top-nav-link"
+              ><i class="fa-solid fa-heart"></i>Wish List</a
+            >
           </li>
         </ul>
-        <!-- end of social media links -->
+      </nav>
+    </div>
 
-        <div class="year">
-          <p>2023</p>
+    <!-- Top search -->
+    <div class="search">
+      <form class="search-form">
+        <input type="text" class="search-input" placeholder="Search" />
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+    <!-- End top search -->
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <label for="click">
+        <div class="menu-icon">
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
         </div>
-      </div>
-      <!-- end of sidebar -->
+      </label>
 
-      <!-- navigation -->
+      <!-- Social media links -->
+      <ul class="social-icons-list">
+        <li>
+          <a href="#" class="social-link">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="social-link">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="social-link">
+            <i class="fa-brands fa-google-plus-g"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="social-link">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+        </li>
+      </ul>
+      <!-- End of social media links -->
+
+      <div class="year">
+        <p>2023</p>
+      </div>
+    </div>
+    <!-- End of sidebar -->
+
+    <!-- Navigation -->
+    <div>
+      <input type="checkbox" class="checkbox" id="click" hidden />
       <nav class="navigation">
         <div class="navigation-header">
-          <h1 class="navigation-heading">Ski Resort App</h1>
-
+          <h1 class="navigation-heading">Search</h1>
           <form class="navigation-search">
             <input
               type="text"
@@ -100,92 +126,114 @@
           </form>
         </div>
 
-        <ul class="navigation-list">
-          <li class="navigation-item">
-            <a href="#" class="navigation-link">home</a>
-          </li>
-          <li class="navigation-item">
-            <a href="#" class="navigation-link locations">locations</a>
+        <section class="first-nav">
+          <ul class="first-nav-list">
+            <li class="first-nav-item">
+              <a href="#" class="navigation-link">home</a>
+            </li>
+            <li class="first-nav-item" id="locations">
+              <a href="#" class="navigation-link location">locations</a>
+              <div class="dropdown">
+                <ul class="first-nav-dropdown">
+                  <li class="sub-nav-item">
+                    <a href="#" class="navigation-link dropdown-link">states</a>
+                  </li>
+                  <li class="sub-nav-item">
+                    <a href="#" class="navigation-link dropdown-link"
+                      >resorts</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </section>
 
-            <ul class="navigation-sub-list">
-              <li class="navigation-item">
-                <a href="#" class="navigation-link">states</a>
-              </li>
-              <ul>
-                <li class="navigation-item">
-                  <a href="#" class="navigation-link">resorts</a>
-                </li>
-              </ul>
-            </ul>
-          </li>
-
-          <li class="navigation-item">
-            <a href="#" class="navigation-link">about us</a>
-          </li>
-          <li class="navigation-item">
-            <a href="#" class="navigation-link">contact us</a>
-          </li>
-        </ul>
+        <section class="second-nav">
+          <ul class="second-nav-list">
+            <li class="second-nav-item">
+              <a href="#" class="navigation-link">about us</a>
+            </li>
+            <li class="second-nav-item">
+              <a href="#" class="navigation-link">contact us</a>
+            </li>
+          </ul>
+        </section>
       </nav>
     </div>
-    <!-- end of navigation -->
-    <!-- end of nav bar -->
-    <video
-      class="bg scale-width"
-      autoplay=""
-      muted=""
-      loop=""
-      style="opacity: 1; transform-origin: center center 0px"
-    >
-      <source src="./media/mediakit-hero.mp4" type="video/mp4" />
-      Your browser does not support HTML5 video.
-    </video>
+    <!-- End of navigation -->
 
-    <section id="info_page_img">
-      <img
-        src="https://images.unsplash.com/photo-1565733362858-3c610e8044cc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c25vd2JvYXJkaW5nfGVufDB8fDB8fHww"
-        alt="snowboarder"
-        class="info_page_img"
-      />
-    </section>
-
-    <!-- ad img that goes to a link on click -->
-    <aside class="ads">
-      <img src="" alt="$$$" />
-      <h2>Enjoy Cola</h2>
-    </aside>
-
-    <!-- carousel -->
-    <div class="carousel_container">
-      <div
-        id="carouselExampleSlidesOnly"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="https://plus.unsplash.com/premium_photo-1673657332591-735cc4acaee0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZmxpZ2h0JTIwb3ZlciUyMG1vdW50YWluc3xlbnwwfHwwfHx8MA%3D%3D"
-              class="d-block w-100"
-              alt="bird's eye view"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="https://images.unsplash.com/photo-1690917074795-cb78c8c614f5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGFzcGlufGVufDB8fDB8fHww"
-              class="d-block w-100"
-              alt="mountain road"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="https://images.unsplash.com/photo-1600356604423-426d3363ffb7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXNwaW58ZW58MHx8MHx8fDA%3D"
-              class="d-block w-100"
-              alt="snowboarder"
-            />
-          </div>
+    <!-- Header -->
+    <section class="header-section">
+      <header class="header">
+        <div class="brand" id="logo">
+          <img src="./media/skidar.png" width="80rem" alt="Skidar Logo" />
         </div>
+        <video muted="" autoplay="" loop="">
+          <source src="./media/mediakit-hero.mp4" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+
+        <div class="banner">
+          <h1 class="banner-heading">SKIDAR</h1>
+          <p class="banner-paragraph">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus
+            beatae quam dolorem! Possimus, nam quam, accusamus quos, quia
+            exercitationem repudiandae dicta perspiciatis id soluta facere ipsum
+            minima nostrum atque inventore?Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Illo, obcaecati. Optio esse voluptatem
+            odio eum, doloribus numquam tenetur odit velit officiis quibusdam
+            deleniti delectus ratione, minima consequuntur repudiandae dolores
+            magni.
+          </p>
+          <button class="banner-button">Click Here</button>
+        </div>
+      </header>
+      <!-- Carousel -->
+      <div class="carousel-banner">
+        <section class="carousel">
+          <div class="carousel-content">
+            <h1 class="carousel-heading">Write Text Here</h1>
+            <button class="carousel-btn">
+              <span class="banner-btn-text-1">Your Button</span>
+              <span class="banner-btn-text-2">Text Two!</span>
+            </button>
+          </div>
+
+          <div class="slideshow">
+            <div class="slideshow-wrapper">
+              <button class="slide-btn slide-btn-1"></button>
+              <button class="slide-btn slide-btn-2"></button>
+              <button class="slide-btn slide-btn-3"></button>
+              <button class="slide-btn slide-btn-4"></button>
+              <div class="slide">
+                <img src="./media/mtn1.jpg" alt="Mountain 1" />
+              </div>
+              <div class="slide">
+                <img src="./media/mtn2.jpg" alt="Mountain 2" />
+              </div>
+              <div class="slide">
+                <img src="./media/mtn3.jpg" alt="Mountain 3" />
+              </div>
+              <div class="slide">
+                <img src="./media/rd1.avif" alt="Road 1" />
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
+      <!-- End of carousel  -->
+
+      <!-- Ad image that goes to a link on click -->
+      <aside class="ads">
+        <a href="your_ad_link_here">
+          <img src="your_ad_image_source_here" alt="Advertisement" />
+        </a>
+        <h2>Enjoy Cola</h2>
+      </aside>
+    </section>
+    <!-- End of header -->
+
+    <footer></footer>
   </body>
 </html>

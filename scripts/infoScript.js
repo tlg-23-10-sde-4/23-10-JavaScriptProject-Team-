@@ -5,7 +5,7 @@ let res = fetch(url, {
     "Content-Type": "application/json",
   },
   body: JSON.stringify({
-    apiUrl: "https://liftie.info/api/resort/sugarbowl",
+    apiUrl: "https://liftie.info/api/resort/timberline-lodge",
     methodToApi: "GET",
   }),
 })
@@ -42,7 +42,25 @@ function createWeatherCard({ weather }) {
 }
 
 function createWebCards({ webcams }) {
-  
+  webcams.forEach(({ name, image, notice }) => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+    card.setAttribute(
+      "style",
+      "display: flex; flex-wrap: wrap; justify-content: space-evenly;"
+    );
+
+    card.innerHTML = `
+        <img src=${image} class="card-img-top" alt="default">
+        <div class="card-body">
+        <p class="card-text">${name}</p>
+        <p>
+        ${notice}
+        </p>
+        </div>
+        `;
+    webcams_card_container.appendChild(card);
+  });
 }
 
 function createLiftCards({ lifts }) {

@@ -91,13 +91,13 @@ let resorts = [
   ],
 ];
 
-createResortCards(resorts);
-
 function createResortCards(resorts) {
-  resorts.forEach((elt) => {
+  resorts.forEach((elt, i) => {
     let location = elt[0];
     let urlTail = elt[1];
     let imgUrl = elt[3];
+    let num = i + 1;
+    localStorage.setItem(num, urlTail);
     let card = document.createElement("div");
     card.classList.add("card");
     card.setAttribute("style", "width: 18rem");
@@ -106,9 +106,10 @@ function createResortCards(resorts) {
       <img class="" src="${imgUrl}" alt="${location}" width="275" height="400">
       <div class="card-body">
           <h5 class="card-title">${location}</h5>
-          <a href="#" class="btn btn-primary">Details</a>
+          <a href="info.html?key=${num}" class="btn btn-primary">Details</a>
       </div>
       `;
     resort_cards_container.appendChild(card);
   });
 }
+createResortCards(resorts);
