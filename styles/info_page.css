@@ -1,52 +1,59 @@
 .stream {
-    background-color: hwb(250 10% 10% / .4);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 5%;    
-    height: 25rem;
-    width: 50rem;
+  background-color: hwb(250 10% 10% / 0.4);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+  height: fit-content;
+  width: 50rem;
 }
 
 .left {
-    position: absolute;
-    align-items: left;
-    justify-content: center;
+  position: absolute;
+  align-items: left;
+  justify-content: center;
 }
 
 .right {
-    position: relative;
-    margin-left: 55%;
+  position: relative;
+  margin-left: 55%;
 }
 
-.ad{
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5%;    
-    height: 25rem;
-    width: 50rem;   
-        & img {
-        padding: 1.5%;
-    }
+.ad {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  height: 25rem;
+  width: 50rem;
+  & img {
+    padding: 1.5%;
+  }
 }
 
 .navbar {
-    width: 100%;
-    font-size: large;
-    background-color: hwb(150 10% 10% / .6);
+  width: 100%;
+  font-size: large;
+  background-color: hwb(150 10% 10% / 0.6);
 }
 
 #weather_card_container,
 #webcams_card_container,
 #lifts_card_container {
-    height: 100%;
-    width: 80%;
-    padding-top: 5rem;
+  height: auto;
+  width: auto;
+  padding: 5rem;
 }
 
+/* .card_image_top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 3rem;
+} */
+
 #two {
-    position: absolute;
-    margin: 400px 5% 5%;
+  position: absolute;
+  margin: 400px 5% 5%;
 }

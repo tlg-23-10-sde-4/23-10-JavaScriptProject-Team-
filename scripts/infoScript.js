@@ -5,7 +5,7 @@ let res = fetch(url, {
     "Content-Type": "application/json",
   },
   body: JSON.stringify({
-    apiUrl: "https://liftie.info/api/resort/sugarbowl",
+    apiUrl: "https://liftie.info/api/resort/timberline-lodge",
     methodToApi: "GET",
   }),
 })
@@ -44,7 +44,10 @@ function createWebCards({ webcams }) {
   webcams.forEach(({ name, image, notice }) => {
     const card = document.createElement("div");
     card.classList.add("card");
-    card.setAttribute("style", "width: 18rem");
+    card.setAttribute(
+      "style",
+      "display: flex; flex-wrap: wrap; justify-content: space-evenly;"
+    );
 
     card.innerHTML = `
         <img src=${image} class="card-img-top" alt="default">
