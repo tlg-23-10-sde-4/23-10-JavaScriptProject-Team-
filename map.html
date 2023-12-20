@@ -13,24 +13,20 @@
     <link rel="stylesheet" href="styles/info_page.css" />
   </head>
   <body>
-    <gmp-map
-      center="50.11508560180664,-122.94860076904297"
-      zoom="14"
-      map-id="DEMO_MAP_ID"
-      class="stream"
-    >
-      <gmp-advanced-marker
-        position="50.11508560180664,-122.94860076904297"
-        title="My location"
+    <article class="container-lg">
+      <gmp-map
+        center="50.11508560180664,-122.94860076904297"
+        zoom="14"
+        map-id="DEMO_MAP_ID"
+        class="stream"
+        id="map_container"
       >
-      </gmp-advanced-marker>
-
-      <gmp-advanced-marker
-        position="0, 0"
-        title="resortLocation"
-        id="resortPointer"
-      >
-      </gmp-advanced-marker>
-    </gmp-map>
+        <gmp-advanced-marker
+          position="50.11508560180664,-122.94860076904297"
+          title="My location"
+        >
+        </gmp-advanced-marker>
+      </gmp-map>
+    </article>
   </body>
 </html>

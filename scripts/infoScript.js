@@ -19,6 +19,7 @@ function createCards(response) {
   createWeatherCard(response);
   createWebCards(response);
   createLiftCards(response);
+  plotResorts(results);
 }
 
 function createWeatherCard({ weather }) {
@@ -41,22 +42,7 @@ function createWeatherCard({ weather }) {
 }
 
 function createWebCards({ webcams }) {
-  webcams.forEach(({ name, image, notice }) => {
-    const card = document.createElement("div");
-    card.classList.add("card");
-    card.setAttribute("style", "width: 18rem");
-
-    card.innerHTML = `
-        <img src=${image} class="card-img-top" alt="default">
-        <div class="card-body">
-        <p class="card-text">${name}</p>
-        <p>
-        ${notice}
-        </p>
-        </div>
-        `;
-    webcams_card_container.appendChild(card);
-  });
+  
 }
 
 function createLiftCards({ lifts }) {
@@ -72,4 +58,11 @@ function createLiftCards({ lifts }) {
         `;
     lifts_card_container.appendChild(card);
   }
+}
+
+function plotResorts({ll}) {
+  ll.forEach(() => {
+    const point = document.createElement("gmp-advanced-marker");
+    
+  });
 }
