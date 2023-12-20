@@ -48,3 +48,24 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 }
 
 window.initMap = initMap;
+
+userInput.addEventListener("click", (e) => {
+
+  fetch("https://github.com/pirxpilot/liftie/tree/main/lib/resorts")
+  .then((response) => {
+      return response.json();
+  })
+  .then((products) => {
+  plotResorts();
+  })
+  .catch((err) =>{
+      console.log(err);
+  });
+});
+
+function plotResorts() {
+  resorts.forEach(({ll}) => {
+      const plot = document.createElement("gmp-advanced-marker")
+      
+  });
+}

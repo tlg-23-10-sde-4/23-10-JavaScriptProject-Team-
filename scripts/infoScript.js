@@ -19,6 +19,7 @@ function createCards(response) {
   createWeatherCard(response);
   createWebCards(response);
   createLiftCards(response);
+  plotResorts(results);
 }
 
 function createWeatherCard({ weather }) {
@@ -75,4 +76,11 @@ function createLiftCards({ lifts }) {
         `;
     lifts_card_container.appendChild(card);
   }
+}
+
+function plotResorts({ll}) {
+  ll.forEach(() => {
+    const point = document.createElement("gmp-advanced-marker");
+    
+  });
 }
