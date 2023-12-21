@@ -35,7 +35,7 @@ function createWeatherCard({ weather }) {
   card.classList.add("card");
   card.setAttribute("style", "width: 100");
   card.innerHTML = `
-    <div class="card-body" style="display: flex; flex-direction: column; align-items: center;">
+    <div class="card-body" style="display: flex; flex-direction: column; align-items: center; background-color: lightgrey; border: 1px solid lightslategrey;">
       <h5 class="card-title">Weather for ${date}</h5>
       <h5 class="card-text">Summary: ${conditions}</h5>
       <p class="card-text">${text}</p>
