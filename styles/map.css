@@ -4,6 +4,12 @@
  */
  #map {
     height: 100%;
+    background-color: hwb(250 10% 10%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 5%; 
   }
   
   /* 
