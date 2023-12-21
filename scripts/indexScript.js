@@ -14,7 +14,7 @@ let resorts = [
   [
     "Crystal Mountain, WA",
     "crystal-mountain",
-    "-121.5802, 46.9459"
+    "-121.5802, 46.9459",
     "https://images.unsplash.com/photo-1478059299873-f047d8c5fe1a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   ],
   [

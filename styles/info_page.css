@@ -9,17 +9,6 @@
   width: 50rem;
 }
 
-.left {
-  position: absolute;
-  align-items: left;
-  justify-content: center;
-}
-
-.right {
-  position: relative;
-  margin-left: 55%;
-}
-
 .ad {
   position: relative;
   justify-content: center;
@@ -64,6 +53,7 @@
   justify-content: center;
   gap: 1rem;
   border: 5px solid slategrey;
+  background-color: aliceblue;
   margin: 50px;
 }
 
