@@ -31,7 +31,7 @@ function createWeatherCard({ weather }) {
   card.classList.add("card");
   card.setAttribute("style", "width: 100");
   card.innerHTML = `
-    <div class="card-body">
+    <div class="card-body" style="display: flex; flex-direction: column; align-items: center;">
       <h5 class="card-title">Weather for ${date}</h5>
       <h5 class="card-text">Summary: ${conditions}</h5>
       <p class="card-text">${text}</p>
@@ -44,22 +44,15 @@ function createWeatherCard({ weather }) {
 function createWebCards({ webcams }) {
   webcams.forEach(({ name, image, notice }) => {
     const card = document.createElement("div");
-    card.classList.add("card");
-    card.setAttribute(
-      "style",
-      "display: flex; flex-wrap: wrap; justify-content: space-evenly;"
-    );
-
+    card.classList.add("carousel-item");
     card.innerHTML = `
-        <img src=${image} class="card-img-top" alt="default">
-        <div class="card-body">
-        <p class="card-text">${name}</p>
-        <p>
-        ${notice}
-        </p>
+        <img src=${image} class="d-block w-100" alt=${name}>
+        <div class="carousel-caption d-none d-md-block">
+          <h5>${name}</h5>
+          <p>${notice}</p>
         </div>
         `;
-    webcams_card_container.appendChild(card);
+    webcam_carousel.appendChild(card);
   });
 }
 
@@ -78,9 +71,8 @@ function createLiftCards({ lifts }) {
   }
 }
 
-function plotResorts({ll}) {
+function plotResorts({ ll }) {
   ll.forEach(() => {
     const point = document.createElement("gmp-advanced-marker");
-    
   });
 }
