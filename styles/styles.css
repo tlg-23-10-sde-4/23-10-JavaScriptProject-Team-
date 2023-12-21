@@ -397,7 +397,7 @@ video {
 }
 
 .search-btn {
-    grid-column: 10 / 11
+    grid-column: 10 / 11;
     grid-row: 1 / 2;
     border: none;
     background-color: transparent;
