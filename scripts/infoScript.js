@@ -1,6 +1,7 @@
 let url_string = window.location.href;
 let url1 = new URL(url_string);
 let key = url1.searchParams.get("key");
+let loc = url1.searchParams.get("loc");
 
 let url = "https://bypass-cors-jjg7.onrender.com";
 let res = fetch(url, {
@@ -35,8 +36,10 @@ function createWeatherCard({ weather }) {
   card.classList.add("card");
   card.setAttribute("style", "width: 100");
   card.innerHTML = `
-    <div class="card-body" style="display: flex; flex-direction: column; align-items: center; background-color: lightgrey; border: 1px solid lightslategrey;">
-      <h5 class="card-title">Weather for ${date}</h5>
+at-homePageStyle
+    <div class="card-body" style="display: flex; flex-direction: column; align-items: center;">
+      <h2 class="card-title">Weather for ${loc}</h2>
+      <h5>${date}</h5>
       <h5 class="card-text">Summary: ${conditions}</h5>
       <p class="card-text">${text}</p>
       <a href="${link}" class="btn btn-primary">Learn more</a>

@@ -106,7 +106,7 @@ function createResortCards(resorts) {
       <img class="" src="${imgUrl}" alt="${location}" width="275" height="400">
       <div class="card-body">
           <h5 class="card-title">${location}</h5>
-          <a href="info.html?key=${urlTail}" class="btn btn-primary">Details</a>
+          <a href="info.html?key=${urlTail}&loc=${location}" class="btn btn-primary">Details</a>
       </div>
       `;
     resort_cards_container.appendChild(card);
