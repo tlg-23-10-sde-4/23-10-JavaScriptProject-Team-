@@ -14,7 +14,7 @@ let resorts = [
   [
     "Crystal Mountain, WA",
     "crystal-mountain",
-    "-121.5802, 46.9459"
+    "-121.5802, 46.9459",
     "https://images.unsplash.com/photo-1478059299873-f047d8c5fe1a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   ],
   [
@@ -106,7 +106,7 @@ function createResortCards(resorts) {
       <img class="" src="${imgUrl}" alt="${location}" width="275" height="400">
       <div class="card-body">
           <h5 class="card-title">${location}</h5>
-          <a href="info.html?key=${num}" class="btn btn-primary">Details</a>
+          <a href="info.html?key=${urlTail}" class="btn btn-primary">Details</a>
       </div>
       `;
     resort_cards_container.appendChild(card);

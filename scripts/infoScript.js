@@ -1,3 +1,7 @@
+let url_string = window.location.href;
+let url1 = new URL(url_string);
+let key = url1.searchParams.get("key");
+
 let url = "https://bypass-cors-jjg7.onrender.com";
 let res = fetch(url, {
   method: "POST",
@@ -5,7 +9,7 @@ let res = fetch(url, {
     "Content-Type": "application/json",
   },
   body: JSON.stringify({
-    apiUrl: "https://liftie.info/api/resort/timberline-lodge",
+    apiUrl: "https://liftie.info/api/resort/" + key,
     methodToApi: "GET",
   }),
 })
