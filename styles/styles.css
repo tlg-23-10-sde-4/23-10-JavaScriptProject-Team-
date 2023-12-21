@@ -75,7 +75,7 @@ body {
 /* navigation */
 .navigation {
     position: fixed;
-    left: -24.8rem;
+    left: -28rem;
     height: 100%;
     background: linear-gradient(to top left, hwb(150 10% 10% / .5), hwb(250 10% 10% / .4)), center/cover no-repeat;
     display: flex;
