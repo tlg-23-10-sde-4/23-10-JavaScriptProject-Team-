@@ -36,13 +36,12 @@ function createWeatherCard({ weather }) {
   card.classList.add("card");
   card.setAttribute("style", "width: 100");
   card.innerHTML = `
-at-homePageStyle
     <div class="card-body" style="display: flex; flex-direction: column; align-items: center;">
       <h2 class="card-title">Weather for ${loc}</h2>
       <h5>${date}</h5>
       <h5 class="card-text">Summary: ${conditions}</h5>
       <p class="card-text">${text}</p>
-      <a href="${link}" class="btn btn-primary">Learn more</a>
+      <a href="${link}" class="btn btn-info">Learn more</a>
     </div>
     `;
   weather_card_container.appendChild(card);
@@ -70,7 +69,7 @@ function createLiftCards({ lifts }) {
     card.classList.add("card");
     card.setAttribute("style", "width: 18rem");
     card.innerHTML = `
-        <div class="card-body">
+        <div class="card-body" style="background-color: lightgrey; border: 1px solid lightslategrey;">
           <p class="card-text">${status}</p>
         </div>
         `;
