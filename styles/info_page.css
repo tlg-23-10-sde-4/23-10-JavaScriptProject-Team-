@@ -82,3 +82,23 @@
 .card-body {
   box-shadow: 8px 8px 5px gray;
 }
+
+.default-status {
+  background-color: lightgrey;
+  border: 1px solid lightslategrey;
+}
+
+.scheduled-status {
+  background-color: rgba(255, 240, 0, 0.2);
+  border: 1px solid lightslategrey;
+}
+
+.closed-status {
+  background-color: rgba(255, 0, 0, 0.2);
+  border: 1px solid lightslategrey;
+}
+
+.open-status {
+  background-color: rgba(135, 211, 124, 0.2);
+  border: 1px solid lightslategrey;
+}
