@@ -69,10 +69,31 @@ function createLiftCards({ lifts }) {
     card.classList.add("card");
     card.setAttribute("style", "width: 18rem");
     card.innerHTML = `
-        <div class="card-body" style="background-color: lightgrey; border: 1px solid lightslategrey;">
+        <div class="card-body default-status">
           <p class="card-text">${status}</p>
         </div>
         `;
+    if (status.includes("scheduled")) {
+      card.innerHTML = `
+        <div class="card-body scheduled-status">
+          <p class="card-text">${status}</p>
+        </div>
+        `;
+    }
+    if (status.includes("closed")) {
+      card.innerHTML = `
+        <div class="card-body closed-status">
+          <p class="card-text">${status}</p>
+        </div>
+        `;
+    }
+    if (status.includes("open")) {
+      card.innerHTML = `
+        <div class="card-body open-status">
+          <p class="card-text">${status}</p>
+        </div>
+        `;
+    }
     lifts_card_container.appendChild(card);
   }
 }
