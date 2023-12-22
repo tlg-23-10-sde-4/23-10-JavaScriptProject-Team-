@@ -10,6 +10,7 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
+
 /* navbar */
 .sidebar {
     width: 8rem;
@@ -251,7 +252,12 @@ body {
 }
 
 /* end of navigation */
-
+.home-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15% 10% 15% 30%;
+}
 .container {
     display: grid;
     grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(6rem, 1fr);
@@ -260,11 +266,12 @@ body {
 }
 
 /* header */
+.header-section{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+}
 .header {
-    position: relative;
-    margin:0;
-    padding-left: -.1rem;
-    height: 100vh;
     width: 100%;
     background-size: cover;
 }
@@ -279,12 +286,9 @@ body {
 
 .banner {   /* for top of page */
     color: hwb(250 10% 10% / .9);
-    width: 100vw;
-    height: 65rem;
     display: flex;
-    margin-left: 50rem;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
     justify-content: center;
 }
 
@@ -332,49 +336,8 @@ body {
     }
 }
 
-video {
-    position: absolute;
-    margin-top: 0;
-    left:0;
-    object-fit: cover;
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-    opacity: .4;
-    z-index: -1;
-}
 
 /* end of header */
-
-.top-nav-container {
-    display: grid;
-    width: 100vh; 
-    grid-template-columns: minmax(6rem, 1fr) repeat(20, minmax(10rem, 16rem)) minmax(16rem, 1fr);
-    grid-template-rows: repeat(2, min-content);
-    gap: 1.6rem;
-    margin-top: 1.6rem;
-}
-
-.top-nav {
-    grid-row: 1 / 2;
-    grid-column: 17 / 21;
-}
-
-.top-nav-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    list-style: none;
-}
-
-.top-nav-link {
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: blue;
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    z-index: 10;
-}
 
 /* .top-nav-link::after {
     content: "";
@@ -454,17 +417,14 @@ video {
 
 /* carousel banner */
 .carousel-banner {
-    display: grid;
-    grid-template-columns: minmax(8rem, 1fr) repeat(10, minmax(min-content, 16rem)) minmax(8rem, 1fr);
-    grid-template-rows: repeat(1, min-content) 70vh;
-    gap: 1.6rem;
+    
     margin-top: 1.6rem;
 }
 
 .carousel {
-    grid-column: 2 / 10;
-    grid-row: 4 / 5;
-    position: relative;
+    width: 100%;
+    display:flex;
+
 }
 
 .carousel-content {
