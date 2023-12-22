@@ -100,14 +100,15 @@ function createResortCards(resorts) {
     localStorage.setItem(num, urlTail);
     let card = document.createElement("div");
     card.classList.add("card");
-    card.setAttribute("style", "width: 18rem");
+    card.setAttribute("style", "width: 18rem; margin: 40px;");
 
     card.innerHTML = `
       <img class="" src="${imgUrl}" alt="${location}" width="275" height="400">
-      <div class="card-body">
+      <div class="card-body" >
           <h5 class="card-title">${location}</h5>
           <a href="info.html?key=${urlTail}&loc=${location}" class="btn btn-primary">Details</a>
       </div>
+    </div>
       `;
     resort_cards_container.appendChild(card);
   });
